@@ -1,0 +1,205 @@
+{
+    "meta": {
+        "title": "Precision Hardware Machining Expert | 20 Years of Excellence"
+    },
+    "header": {
+        "logo": "Precision HW"
+    },
+    "nav": {
+        "about": "About Us",
+        "services": "Services",
+        "products": "Products",
+        "advantages": "Advantages",
+        "equipment": "Equipment",
+        "quote": "Get Quote",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Precision Hardware Machining Expert",
+        "subtitle": "20 years of precision parts manufacturing, providing one-stop solutions for global customers",
+        "cta": {
+            "quote": "Get Quote",
+            "learn": "Learn More"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "subtitle": "Focused on Precision Manufacturing, Building Quality Foundation",
+        "description1": "We are a professional precision hardware parts manufacturing company established in 2004, with 20 years of industry experience. Our facility covers 10,000 square meters, equipped with advanced CNC machining centers, precision lathes, milling machines, and various inspection equipment.",
+        "description2": "We serve multiple industries including automotive, aerospace, medical devices, and electronics. Our products are exported to over 30 countries across Europe, America, and Japan. We adhere to the principle of 'Excellence and Quality First', providing high-precision, high-quality parts machining services.",
+        "stats": {
+            "years": "Years Experience",
+            "clients": "Clients Served",
+            "capacity": "Annual Capacity",
+            "capacitySuffix": "M pcs",
+            "quality": "Quality Rate"
+        }
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive precision machining capabilities to meet all your needs",
+        "cnc": {
+            "title": "CNC Precision Machining",
+            "desc": "3/4/5-axis CNC machining centers with precision up to ±0.005mm, capable of processing complex shapes"
+        },
+        "stamping": {
+            "title": "Stamping",
+            "desc": "High-speed precision stamping for mass production, offering one-stop die design and manufacturing"
+        },
+        "turning": {
+            "title": "Turning",
+            "desc": "CNC lathe processing for shaft and disc parts, high precision, fast efficiency, excellent surface finish"
+        },
+        "milling": {
+            "title": "Milling",
+            "desc": "Milling of planes, curves, slots, gears and various shapes to meet complex part requirements"
+        },
+        "surface": {
+            "title": "Surface Treatment",
+            "desc": "Electroplating, anodizing, coating, polishing and other surface treatments to enhance product quality"
+        },
+        "assembly": {
+            "title": "Assembly Services",
+            "desc": "Complete assembly and finished product services, one-stop delivery to save customer time"
+        }
+    },
+    "products": {
+        "title": "Products",
+        "subtitle": "Precision Manufacturing, Outstanding Quality",
+        "item1": {
+            "title": "Precision Bearing Housing",
+            "desc": "Aerospace-grade aluminum, 5-axis CNC machining"
+        },
+        "item2": {
+            "title": "Automotive Parts",
+            "desc": "High-precision stamping, stable mass production"
+        },
+        "item3": {
+            "title": "Medical Device Components",
+            "desc": "316L stainless steel, medical-grade precision"
+        },
+        "item4": {
+            "title": "Electronic Connectors",
+            "desc": "Brass/phosphor bronze, precision turning"
+        },
+        "item5": {
+            "title": "Aerospace Fasteners",
+            "desc": "Titanium alloy, AS9100 certified"
+        },
+        "item6": {
+            "title": "Optical Instrument Parts",
+            "desc": "Anodized aluminum, precision milling"
+        }
+    },
+    "advantages": {
+        "title": "Why Choose Us",
+        "subtitle": "Professional, Reliable, Efficient Partner",
+        "quality": {
+            "title": "Quality Assurance",
+            "desc": "ISO 9001 certified, strict quality control system, over 99.5% pass rate"
+        },
+        "delivery": {
+            "title": "On-time Delivery",
+            "desc": "Scientific production scheduling, 98%+ on-time delivery, rapid response to urgent orders"
+        },
+        "price": {
+            "title": "Competitive Pricing",
+            "desc": "Scale production reduces costs, providing competitive pricing for customers"
+        },
+        "tech": {
+            "title": "Advanced Technology",
+            "desc": "Japanese and German equipment, 5-axis machining precision of ±0.005mm"
+        },
+        "team": {
+            "title": "Expert Team",
+            "desc": "200+ professional technicians with average 10+ years experience"
+        },
+        "service": {
+            "title": "Complete Support",
+            "desc": "24/7 technical support, rapid response, full tracking service"
+        }
+    },
+    "equipment": {
+        "title": "Equipment",
+        "subtitle": "Advanced Equipment, Precision Manufacturing",
+        "cnc5": {
+            "title": "5-Axis CNC Machining Center",
+            "spec": "German DMG MORI | ±0.005mm | 12 units"
+        },
+        "lathe": {
+            "title": "CNC Lathe",
+            "spec": "Japanese MAZAK | ±0.003mm | 20 units"
+        },
+        "edm": {
+            "title": "Wire EDM/EDM",
+            "spec": "Swiss Charmilles | ±0.002mm | 8 units"
+        },
+        "cmm": {
+            "title": "CMM",
+            "spec": "German ZEISS | ±0.001mm | 4 units"
+        },
+        "certTitle": "Certifications",
+        "cert": {
+            "iso9001": "Quality Management",
+            "iso14001": "Environmental Management",
+            "iatf": "Automotive Quality",
+            "as9100": "Aerospace Certified"
+        }
+    },
+    "quote": {
+        "title": "Request Quote",
+        "subtitle": "Fill out the form and we'll respond within 24 hours",
+        "form": {
+            "name": "Name *",
+            "company": "Company",
+            "email": "Email *",
+            "phone": "Phone *",
+            "productType": "Product Type *",
+            "selectProduct": "Select product type",
+            "productOptions": {
+                "cnc": "CNC Machining",
+                "stamping": "Stamping Parts",
+                "turning": "Turning Parts",
+                "other": "Other"
+            },
+            "quantity": "Estimated Quantity *",
+            "subject": "Subject *",
+            "selectSubject": "Select subject",
+            "subjectOptions": {
+                "cooperation": "Business Inquiry",
+                "technical": "Technical Inquiry",
+                "aftersales": "After-sales Service",
+                "other": "Other"
+            },
+            "message": "Message *",
+            "submit": "Submit Quote Request"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We look forward to working with you",
+        "address": {
+            "label": "Address",
+            "value": "No.1 Chuangye Road, Xin'an, Bao'an District, Shenzhen, Guangdong, China"
+        },
+        "phone": {
+            "label": "Phone"
+        },
+        "email": {
+            "label": "Email"
+        },
+        "hours": {
+            "label": "Business Hours",
+            "value": "Monday - Saturday 8:00 AM - 6:00 PM"
+        },
+        "mapPlaceholder": "Loading map..."
+    },
+    "footer": {
+        "brand": "Precision Hardware",
+        "description": "20 years dedicated to precision parts manufacturing, providing high-quality machining services to global customers",
+        "quickLinks": "Quick Links",
+        "services": "Services",
+        "contactUs": "Contact",
+        "copyright": "© 2024 Precision Hardware Manufacturing Co. All rights reserved."
+    }
+}

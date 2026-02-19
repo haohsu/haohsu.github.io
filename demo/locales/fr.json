@@ -1,0 +1,205 @@
+{
+    "meta": {
+        "title": "Expert en Usinage de Précision | 20 Ans d'Excellence"
+    },
+    "header": {
+        "logo": "Précision HW"
+    },
+    "nav": {
+        "about": "À Propos",
+        "services": "Services",
+        "products": "Produits",
+        "advantages": "Avantages",
+        "equipment": "Équipements",
+        "quote": "Devis",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Expert en Usinage de Précision",
+        "subtitle": "20 ans d'expertise dans la fabrication de pièces de précision, des solutions complètes pour nos clients internationaux",
+        "cta": {
+            "quote": "Demander un Devis",
+            "learn": "En Savoir Plus"
+        }
+    },
+    "about": {
+        "title": "À Propos de Nous",
+        "subtitle": "Focalisés sur la Fabrication de Précision, Fondation de Qualité",
+        "description1": "Nous sommes une entreprise spécialisée dans la fabrication de pièces métalliques de précision, fondée en 2004, avec 20 ans d'expérience. Notre usine couvre 10 000 m², équipée de centres d'usinage CNC avancés, tours de précision, fraiseuses et équipements d'inspection.",
+        "description2": "Nous servons de nombreux secteurs : automobile, aéronautique, médical, électronique. Nos produits sont exportés dans plus de 30 pays en Europe, Amérique et Japon. Nous adhérons au principe « Excellence et Qualité », offrant des services d'usinage de haute précision.",
+        "stats": {
+            "years": "Ans d'Expérience",
+            "clients": "Clients Servis",
+            "capacity": "Capacité Annuelle",
+            "capacitySuffix": "M pièces",
+            "quality": "Taux de Qualité"
+        }
+    },
+    "services": {
+        "title": "Nos Services",
+        "subtitle": "Capacités complètes d'usinage de précision pour tous vos besoins",
+        "cnc": {
+            "title": "Usinage CNC de Précision",
+            "desc": "Centres d'usinage CNC 3/4/5 axes, précision jusqu'à ±0.005mm, formes complexes possibles"
+        },
+        "stamping": {
+            "title": "Emboutissage",
+            "desc": "Emboutissage haute vitesse pour production de masse, conception et fabrication d'outillage intégrées"
+        },
+        "turning": {
+            "title": "Tournage",
+            "desc": "Usinage sur tour CNC pour pièces cylindriques, haute précision, efficacité et finition excellente"
+        },
+        "milling": {
+            "title": "Fraisage",
+            "desc": "Fraisage de surfaces planes, courbes, rainures, engrenages pour pièces complexes"
+        },
+        "surface": {
+            "title": "Traitement de Surface",
+            "desc": "Placage, anodisation, peinture, polissage pour améliorer la qualité des produits"
+        },
+        "assembly": {
+            "title": "Services d'Assemblage",
+            "desc": "Assemblage complet de composants et produits finis, livraison clé en main"
+        }
+    },
+    "products": {
+        "title": "Produits",
+        "subtitle": "Fabrication de Précision, Qualité Exceptionnelle",
+        "item1": {
+            "title": "Palier de Précision",
+            "desc": "Aluminium aéronautique, usinage CNC 5 axes"
+        },
+        "item2": {
+            "title": "Pièces Automobiles",
+            "desc": "Emboutissage haute précision, production stable"
+        },
+        "item3": {
+            "title": "Composants Médicaux",
+            "desc": "Acier inox 316L, précision médicale"
+        },
+        "item4": {
+            "title": "Connecteurs Électroniques",
+            "desc": "Laiton/bronze phosphoreux, tournage précis"
+        },
+        "item5": {
+            "title": "Fixations Aéronautiques",
+            "desc": "Alliage de titane, certifié AS9100"
+        },
+        "item6": {
+            "title": "Pièces Optiques",
+            "desc": "Aluminium anodisé, fraisage de précision"
+        }
+    },
+    "advantages": {
+        "title": "Pourquoi Nous Choisir",
+        "subtitle": "Partenaire Professionnel, Fiable et Efficace",
+        "quality": {
+            "title": "Assurance Qualité",
+            "desc": "Certifié ISO 9001, contrôle qualité strict, taux de conformité supérieur à 99,5%"
+        },
+        "delivery": {
+            "title": "Livraison Ponctuelle",
+            "desc": "Planification scientifique, 98%+ de livraisons à temps, réponse rapide aux urgences"
+        },
+        "price": {
+            "title": "Prix Compétitifs",
+            "desc": "Production à grande échelle réduisant les coûts, prix compétitifs pour nos clients"
+        },
+        "tech": {
+            "title": "Technologie Avancée",
+            "desc": "Équipements japonais et allemands, précision 5 axes de ±0.005mm"
+        },
+        "team": {
+            "title": "Équipe Expert",
+            "desc": "Plus de 200 techniciens professionnels avec 10+ ans d'expérience en moyenne"
+        },
+        "service": {
+            "title": "Support Complet",
+            "desc": "Support technique 24/7, réponse rapide, suivi complet du service"
+        }
+    },
+    "equipment": {
+        "title": "Équipements",
+        "subtitle": "Équipements Avancés, Fabrication de Précision",
+        "cnc5": {
+            "title": "Centre d'Usinage CNC 5 Axes",
+            "spec": "DMG MORI Allemagne | ±0.005mm | 12 unités"
+        },
+        "lathe": {
+            "title": "Tour CNC",
+            "spec": "MAZAK Japon | ±0.003mm | 20 unités"
+        },
+        "edm": {
+            "title": "Électroérosion à Fil",
+            "spec": "Charmilles Suisse | ±0.002mm | 8 unités"
+        },
+        "cmm": {
+            "title": "MMT",
+            "spec": "ZEISS Allemagne | ±0.001mm | 4 unités"
+        },
+        "certTitle": "Certifications",
+        "cert": {
+            "iso9001": "Management Qualité",
+            "iso14001": "Management Environnemental",
+            "iatf": "Qualité Automobile",
+            "as9100": "Certifié Aéronautique"
+        }
+    },
+    "quote": {
+        "title": "Demande de Devis",
+        "subtitle": "Remplissez le formulaire, nous vous répondrons sous 24 heures",
+        "form": {
+            "name": "Nom *",
+            "company": "Entreprise",
+            "email": "Email *",
+            "phone": "Téléphone *",
+            "productType": "Type de Produit *",
+            "selectProduct": "Sélectionner le type",
+            "productOptions": {
+                "cnc": "Usinage CNC",
+                "stamping": "Emboutissage",
+                "turning": "Tournage",
+                "other": "Autre"
+            },
+            "quantity": "Quantité Estimée *",
+            "subject": "Sujet *",
+            "selectSubject": "Sélectionner le sujet",
+            "subjectOptions": {
+                "cooperation": "Demande Commerciale",
+                "technical": "Question Technique",
+                "aftersales": "Service Après-Vente",
+                "other": "Autre"
+            },
+            "message": "Message *",
+            "submit": "Envoyer la Demande"
+        }
+    },
+    "contact": {
+        "title": "Nous Contacter",
+        "subtitle": "Nous nous réjouissons de travailler avec vous",
+        "address": {
+            "label": "Adresse",
+            "value": "N°1 Chuangye Road, Xin'an, District Bao'an, Shenzhen, Guangdong, Chine"
+        },
+        "phone": {
+            "label": "Téléphone"
+        },
+        "email": {
+            "label": "Email"
+        },
+        "hours": {
+            "label": "Heures d'Ouverture",
+            "value": "Lundi - Samedi 8h00 - 18h00"
+        },
+        "mapPlaceholder": "Chargement de la carte..."
+    },
+    "footer": {
+        "brand": "Précision Métallique",
+        "description": "20 ans dédiés à la fabrication de pièces de précision, offrant des services d'usinage de haute qualité aux clients du monde entier",
+        "quickLinks": "Liens Rapides",
+        "services": "Services",
+        "contactUs": "Contact",
+        "copyright": "© 2024 Precision Hardware Manufacturing Co. Tous droits réservés."
+    }
+}

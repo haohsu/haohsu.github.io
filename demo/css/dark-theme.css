@@ -1,0 +1,125 @@
+/* ============================================
+   Dark Theme Variables Override
+   ============================================ */
+[data-theme="dark"] {
+    /* Colors - Dark Titanium Industrial Theme */
+    --color-primary: #0891B2;
+    --color-accent: #22D3EE;
+    --color-accent-hover: #67E8F9;
+    --color-secondary: #94A3B8;
+    --color-bg: #030712;
+    --color-surface: #0F172A;
+    --color-text: #F1F5F9;
+    --color-text-muted: #94A3B8;
+    --color-border: #1E293B;
+    --color-success: #10B981;
+    --color-error: #EF4444;
+
+    /* Adjusted shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   Dark Theme Specific Overrides
+   ============================================ */
+[data-theme="dark"] .logo-text {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .service-title,
+[data-theme="dark"] .product-title,
+[data-theme="dark"] .advantage-title,
+[data-theme="dark"] .equipment-title,
+[data-theme="dark"] .cert-title,
+[data-theme="dark"] .contact-content h3 {
+    color: var(--color-text);
+}
+
+/* Hero section adjustments for dark mode */
+[data-theme="dark"] .hero-bg {
+    background: linear-gradient(135deg, #030712 0%, #0F172A 50%, #0891B2 100%);
+}
+
+[data-theme="dark"] .hero-overlay {
+    background: rgba(3, 7, 18, 0.5);
+}
+
+/* Form adjustments */
+[data-theme="dark"] .quote-form {
+    border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--color-bg);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Card hover effects */
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .product-card:hover,
+[data-theme="dark"] .equipment-card:hover {
+    border-color: var(--color-accent);
+}
+
+/* Footer adjustments */
+[data-theme="dark"] .footer {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-top-color: var(--color-border);
+}
+
+/* Certifications section */
+[data-theme="dark"] .certifications {
+    background-color: var(--color-surface);
+}
+
+/* Map placeholder */
+[data-theme="dark"] .map-placeholder {
+    background-color: var(--color-surface);
+}
+
+/* Stat items hover */
+[data-theme="dark"] .stat-item:hover {
+    background-color: var(--color-surface);
+}
+
+/* Smooth transition for theme changes */
+html {
+    color-scheme: light;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+body,
+.header,
+.service-card,
+.product-card,
+.equipment-card,
+.stat-item,
+.certifications,
+.quote-form,
+.contact-map,
+.footer {
+    transition: background-color var(--transition-base),
+                color var(--transition-base),
+                border-color var(--transition-base);
+}

@@ -1,0 +1,205 @@
+{
+    "meta": {
+        "title": "Experte für Präzisions-Metallbearbeitung | 20 Jahre Erfahrung"
+    },
+    "header": {
+        "logo": "Präzision HW"
+    },
+    "nav": {
+        "about": "Über Uns",
+        "services": "Leistungen",
+        "products": "Produkte",
+        "advantages": "Vorteile",
+        "equipment": "Ausstattung",
+        "quote": "Angebot",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "title": "Experte für Präzisions-Metallbearbeitung",
+        "subtitle": "20 Jahre Erfahrung in der Präzisionsteile-Fertigung, One-Stop-Lösungen für globale Kunden",
+        "cta": {
+            "quote": "Angebot Anfordern",
+            "learn": "Mehr Erfahren"
+        }
+    },
+    "about": {
+        "title": "Über Uns",
+        "subtitle": "Fokus auf Präzisionsfertigung, Qualität als Grundstein",
+        "description1": "Wir sind ein Fachunternehmen für Präzisions-Metallteile, gegründet 2004, mit 20 Jahren Branchenerfahrung. Unser Werk umfasst 10.000 m², ausgestattet mit modernen CNC-Bearbeitungszentren, Präzisionsdrehmaschinen, Fräsmaschinen und Prüfgeräten.",
+        "description2": "Wir bedienen Branchen wie Automobil, Luft- und Raumfahrt, Medizintechnik und Elektronik. Unsere Produkte werden in über 30 Länder exportiert. Wir folgen dem Prinzip 'Exzellenz und Qualität zuerst' und bieten hochpräzise Bearbeitungsdienstleistungen.",
+        "stats": {
+            "years": "Jahre Erfahrung",
+            "clients": "Betreute Kunden",
+            "capacity": "Jahreskapazität",
+            "capacitySuffix": "Mio. Stk.",
+            "quality": "Qualitätsrate"
+        }
+    },
+    "services": {
+        "title": "Unsere Leistungen",
+        "subtitle": "Umfassende Präzisionsbearbeitung für alle Ihre Anforderungen",
+        "cnc": {
+            "title": "CNC-Präzisionsbearbeitung",
+            "desc": "3/4/5-Achs CNC-Bearbeitungszentren, Präzision bis ±0,005mm, komplexe Formen möglich"
+        },
+        "stamping": {
+            "title": "Stanzen",
+            "desc": "Hochgeschwindigkeits-Präzisionsstanzen für Serienfertigung, Werkzeugbau inklusive"
+        },
+        "turning": {
+            "title": "Drehen",
+            "desc": "CNC-Drehbearbeitung für Wellen und Scheiben, hohe Präzision und Oberflächengüte"
+        },
+        "milling": {
+            "title": "Fräsen",
+            "desc": "Fräsen von Ebenen, Kurven, Nuten, Zahnrädern für komplexe Teile"
+        },
+        "surface": {
+            "title": "Oberflächenbehandlung",
+            "desc": "Galvanisieren, Eloxieren, Lackieren, Polieren zur Qualitätsverbesserung"
+        },
+        "assembly": {
+            "title": "Montageservice",
+            "desc": "Komplette Baugruppen- und Produktmontage, schlüsselfertige Lieferung"
+        }
+    },
+    "products": {
+        "title": "Produkte",
+        "subtitle": "Präzisionsfertigung, Herausragende Qualität",
+        "item1": {
+            "title": "Präzisions-Lagergehäuse",
+            "desc": "Luftfahrt-Aluminium, 5-Achs CNC-Bearbeitung"
+        },
+        "item2": {
+            "title": "Automobilteile",
+            "desc": "Hochpräzise Stanzteile, stabile Serienfertigung"
+        },
+        "item3": {
+            "title": "Medizintechnik-Komponenten",
+            "desc": "Edelstahl 316L, medizinische Präzision"
+        },
+        "item4": {
+            "title": "Elektronik-Steckverbinder",
+            "desc": "Messing/Phosphorbronze, Präzisionsdrehen"
+        },
+        "item5": {
+            "title": "Luft- und Raumfahrt-Verbindungselemente",
+            "desc": "Titanlegierung, AS9100-zertifiziert"
+        },
+        "item6": {
+            "title": "Optik-Komponenten",
+            "desc": "Eloxiertes Aluminium, Präzisionsfräsen"
+        }
+    },
+    "advantages": {
+        "title": "Warum Wir",
+        "subtitle": "Professioneller, Zuverlässiger, Effizienter Partner",
+        "quality": {
+            "title": "Qualitätssicherung",
+            "desc": "ISO 9001 zertifiziert, strenge Qualitätskontrolle, über 99,5% Erfolgsrate"
+        },
+        "delivery": {
+            "title": "Pünktliche Lieferung",
+            "desc": "Wissenschaftliche Produktionsplanung, 98%+ Termintreue, schnelle Reaktion"
+        },
+        "price": {
+            "title": "Wettbewerbsfähige Preise",
+            "desc": "Serienfertigung senkt Kosten, attraktive Preisgestaltung für Kunden"
+        },
+        "tech": {
+            "title": "Fortschrittliche Technik",
+            "desc": "Japanische und deutsche Ausrüstung, 5-Achs Präzision von ±0,005mm"
+        },
+        "team": {
+            "title": "Expertenteam",
+            "desc": "Über 200 Fachkräfte mit durchschnittlich 10+ Jahren Erfahrung"
+        },
+        "service": {
+            "title": "Kompletter Support",
+            "desc": "24/7 technischer Support, schnelle Reaktion, vollständige Betreuung"
+        }
+    },
+    "equipment": {
+        "title": "Ausstattung",
+        "subtitle": "Moderne Ausrüstung, Präzisionsfertigung",
+        "cnc5": {
+            "title": "5-Achs CNC-Bearbeitungszentrum",
+            "spec": "DMG MORI Deutschland | ±0,005mm | 12 Einheiten"
+        },
+        "lathe": {
+            "title": "CNC-Drehmaschine",
+            "spec": "MAZAK Japan | ±0,003mm | 20 Einheiten"
+        },
+        "edm": {
+            "title": "Drahterodiermaschine",
+            "spec": "Charmilles Schweiz | ±0,002mm | 8 Einheiten"
+        },
+        "cmm": {
+            "title": "Koordinatenmessgerät",
+            "spec": "ZEISS Deutschland | ±0,001mm | 4 Einheiten"
+        },
+        "certTitle": "Zertifizierungen",
+        "cert": {
+            "iso9001": "Qualitätsmanagement",
+            "iso14001": "Umweltmanagement",
+            "iatf": "Automobil-Qualität",
+            "as9100": "Luft- und Raumfahrt"
+        }
+    },
+    "quote": {
+        "title": "Angebot Anfordern",
+        "subtitle": "Füllen Sie das Formular aus, wir antworten innerhalb von 24 Stunden",
+        "form": {
+            "name": "Name *",
+            "company": "Unternehmen",
+            "email": "E-Mail *",
+            "phone": "Telefon *",
+            "productType": "Produkttyp *",
+            "selectProduct": "Produkttyp wählen",
+            "productOptions": {
+                "cnc": "CNC-Bearbeitung",
+                "stamping": "Stanzteile",
+                "turning": "Drehteile",
+                "other": "Sonstiges"
+            },
+            "quantity": "Geschätzte Menge *",
+            "subject": "Betreff *",
+            "selectSubject": "Betreff wählen",
+            "subjectOptions": {
+                "cooperation": "Geschäftsanfrage",
+                "technical": "Technische Frage",
+                "aftersales": "Kundendienst",
+                "other": "Sonstiges"
+            },
+            "message": "Nachricht *",
+            "submit": "Anfrage Senden"
+        }
+    },
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Wir freuen uns auf die Zusammenarbeit mit Ihnen",
+        "address": {
+            "label": "Adresse",
+            "value": "Nr. 1 Chuangye Road, Xin'an, Bao'an Bezirk, Shenzhen, Guangdong, China"
+        },
+        "phone": {
+            "label": "Telefon"
+        },
+        "email": {
+            "label": "E-Mail"
+        },
+        "hours": {
+            "label": "Öffnungszeiten",
+            "value": "Montag - Samstag 8:00 - 18:00 Uhr"
+        },
+        "mapPlaceholder": "Karte wird geladen..."
+    },
+    "footer": {
+        "brand": "Präzisions-Metallbearbeitung",
+        "description": "20 Jahre Engagement für Präzisionsteile-Fertigung, hochwertige Bearbeitungsdienstleistungen für Kunden weltweit",
+        "quickLinks": "Schnelllinks",
+        "services": "Leistungen",
+        "contactUs": "Kontakt",
+        "copyright": "© 2024 Precision Hardware Manufacturing Co. Alle Rechte vorbehalten."
+    }
+}
