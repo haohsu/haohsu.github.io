@@ -4,4 +4,4 @@
 
 ## 演示项目
 
-- [精密五金加工展示页面](../demo/index.html)
+- [精密五金加工展示页面](./demo/index.html)
