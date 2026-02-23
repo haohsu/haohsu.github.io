@@ -89,7 +89,8 @@
         "item6": {
             "title": "光学機器部品",
             "desc": "アルマイト処理アルミ、高精度フライス"
-        }
+        },
+        "viewer3d": "3D 部品を見る"
     },
     "advantages": {
         "title": "選ばれる理由",
@@ -201,5 +202,57 @@
         "services": "サービス",
         "contactUs": "お問い合わせ",
         "copyright": "© 2024 精密金属加工株式会社. All rights reserved."
+    },
+    "viewer": {
+        "title": "3D 部品ビューア",
+        "pageTitle": "3D 部品ビューア | 精密金属",
+        "backLink": "サイトに戻る",
+        "panel": {
+            "selectPart": "部品を選択",
+            "displayOptions": "表示オプション",
+            "autoRotate": "自動回転",
+            "wireframe": "ワイヤーフレーム",
+            "resetView": "↺ ビューをリセット",
+            "partInfo": "部品情報"
+        },
+        "info": {
+            "name": "名称",
+            "material": "材質",
+            "process": "加工方法",
+            "tolerance": "公差"
+        },
+        "loading": "モデルを読み込み中...",
+        "placeholder": "（プレースホルダーモデル）",
+        "hint": "左ドラッグで回転 · スクロールでズーム · 右ドラッグで移動",
+        "parts": {
+            "cnc-shaft": {
+                "label": "CNC 精密シャフト",
+                "name": "CNC 精密シャフト",
+                "material": "アルミ合金 6061",
+                "process": "CNC 旋削",
+                "tolerance": "±0.01 mm"
+            },
+            "stamping": {
+                "label": "プレス部品",
+                "name": "プレス部品",
+                "material": "SPCC 冷間圧延鋼",
+                "process": "精密プレス",
+                "tolerance": "±0.05 mm"
+            },
+            "turning": {
+                "label": "旋削部品",
+                "name": "旋削部品",
+                "material": "ステンレス 304",
+                "process": "CNC 旋削",
+                "tolerance": "±0.02 mm"
+            },
+            "bracket": {
+                "label": "ブラケット",
+                "name": "ブラケット",
+                "material": "アルミ合金 7075",
+                "process": "CNC フライス",
+                "tolerance": "±0.03 mm"
+            }
+        }
     }
 }

@@ -89,7 +89,8 @@
         "item6": {
             "title": "Pièces Optiques",
             "desc": "Aluminium anodisé, fraisage de précision"
-        }
+        },
+        "viewer3d": "Voir les pièces 3D"
     },
     "advantages": {
         "title": "Pourquoi Nous Choisir",
@@ -201,5 +202,57 @@
         "services": "Services",
         "contactUs": "Contact",
         "copyright": "© 2024 Precision Hardware Manufacturing Co. Tous droits réservés."
+    },
+    "viewer": {
+        "title": "Visionneuse 3D",
+        "pageTitle": "Visionneuse 3D | Précision HW",
+        "backLink": "Retour au site",
+        "panel": {
+            "selectPart": "Sélectionner la pièce",
+            "displayOptions": "Options d'affichage",
+            "autoRotate": "Rotation auto",
+            "wireframe": "Fil de fer",
+            "resetView": "↺ Réinitialiser",
+            "partInfo": "Infos pièce"
+        },
+        "info": {
+            "name": "Nom",
+            "material": "Matériau",
+            "process": "Procédé",
+            "tolerance": "Tolérance"
+        },
+        "loading": "Chargement du modèle...",
+        "placeholder": "(Modèle de substitution)",
+        "hint": "Clic gauche pour tourner · Molette pour zoomer · Clic droit pour déplacer",
+        "parts": {
+            "cnc-shaft": {
+                "label": "Arbre CNC de précision",
+                "name": "Arbre CNC de précision",
+                "material": "Aluminium 6061",
+                "process": "Tournage CNC",
+                "tolerance": "±0.01 mm"
+            },
+            "stamping": {
+                "label": "Pièce emboutie",
+                "name": "Pièce emboutie",
+                "material": "Acier laminé SPCC",
+                "process": "Emboutissage de précision",
+                "tolerance": "±0.05 mm"
+            },
+            "turning": {
+                "label": "Pièce tournée",
+                "name": "Pièce tournée",
+                "material": "Inox 304",
+                "process": "Tournage CNC",
+                "tolerance": "±0.02 mm"
+            },
+            "bracket": {
+                "label": "Équerre",
+                "name": "Équerre",
+                "material": "Aluminium 7075",
+                "process": "Fraisage CNC",
+                "tolerance": "±0.03 mm"
+            }
+        }
     }
 }

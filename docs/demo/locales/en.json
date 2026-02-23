@@ -89,7 +89,8 @@
         "item6": {
             "title": "Optical Instrument Parts",
             "desc": "Anodized aluminum, precision milling"
-        }
+        },
+        "viewer3d": "View 3D Parts"
     },
     "advantages": {
         "title": "Why Choose Us",
@@ -201,5 +202,57 @@
         "services": "Services",
         "contactUs": "Contact",
         "copyright": "© 2024 Precision Hardware Manufacturing Co. All rights reserved."
+    },
+    "viewer": {
+        "title": "3D Parts Viewer",
+        "pageTitle": "3D Parts Viewer | Precision HW",
+        "backLink": "Back to Site",
+        "panel": {
+            "selectPart": "Select Part",
+            "displayOptions": "Display Options",
+            "autoRotate": "Auto Rotate",
+            "wireframe": "Wireframe",
+            "resetView": "↺ Reset View",
+            "partInfo": "Part Info"
+        },
+        "info": {
+            "name": "Name",
+            "material": "Material",
+            "process": "Process",
+            "tolerance": "Tolerance"
+        },
+        "loading": "Loading model...",
+        "placeholder": "(Placeholder model)",
+        "hint": "Left drag to rotate · Scroll to zoom · Right drag to pan",
+        "parts": {
+            "cnc-shaft": {
+                "label": "CNC Precision Shaft",
+                "name": "CNC Precision Shaft",
+                "material": "Aluminum 6061",
+                "process": "CNC Turning",
+                "tolerance": "±0.01 mm"
+            },
+            "stamping": {
+                "label": "Stamping Part",
+                "name": "Stamping Part",
+                "material": "SPCC Cold-rolled Steel",
+                "process": "Precision Stamping",
+                "tolerance": "±0.05 mm"
+            },
+            "turning": {
+                "label": "Turned Part",
+                "name": "Turned Part",
+                "material": "Stainless Steel 304",
+                "process": "CNC Turning",
+                "tolerance": "±0.02 mm"
+            },
+            "bracket": {
+                "label": "Bracket",
+                "name": "Bracket",
+                "material": "Aluminum 7075",
+                "process": "CNC Milling",
+                "tolerance": "±0.03 mm"
+            }
+        }
     }
 }

@@ -89,7 +89,8 @@
         "item6": {
             "title": "光学仪器配件",
             "desc": "铝合金阳极氧化，高精度铣削"
-        }
+        },
+        "viewer3d": "查看 3D 零件模型"
     },
     "advantages": {
         "title": "为什么选择我们",
@@ -201,5 +202,57 @@
         "services": "服务项目",
         "contactUs": "联系方式",
         "copyright": "© 2024 精密五金加工公司. 保留所有权利."
+    },
+    "viewer": {
+        "title": "3D 零件展示",
+        "pageTitle": "3D 零件展示 | 精密五金",
+        "backLink": "返回官网",
+        "panel": {
+            "selectPart": "选择零件",
+            "displayOptions": "显示选项",
+            "autoRotate": "自动旋转",
+            "wireframe": "线框模式",
+            "resetView": "↺ 重置视角",
+            "partInfo": "零件信息"
+        },
+        "info": {
+            "name": "名称",
+            "material": "材质",
+            "process": "工艺",
+            "tolerance": "公差"
+        },
+        "loading": "加载模型中...",
+        "placeholder": "（占位模型）",
+        "hint": "左键旋转 · 滚轮缩放 · 右键平移",
+        "parts": {
+            "cnc-shaft": {
+                "label": "CNC 精密轴",
+                "name": "CNC 精密轴",
+                "material": "铝合金 6061",
+                "process": "CNC 车削",
+                "tolerance": "±0.01 mm"
+            },
+            "stamping": {
+                "label": "冲压件",
+                "name": "冲压件",
+                "material": "SPCC 冷轧钢",
+                "process": "精密冲压",
+                "tolerance": "±0.05 mm"
+            },
+            "turning": {
+                "label": "车削件",
+                "name": "车削件",
+                "material": "不锈钢 304",
+                "process": "CNC 车削",
+                "tolerance": "±0.02 mm"
+            },
+            "bracket": {
+                "label": "支架件",
+                "name": "支架件",
+                "material": "铝合金 7075",
+                "process": "CNC 铣削",
+                "tolerance": "±0.03 mm"
+            }
+        }
     }
 }

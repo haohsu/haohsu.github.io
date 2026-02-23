@@ -89,7 +89,8 @@
         "item6": {
             "title": "Optik-Komponenten",
             "desc": "Eloxiertes Aluminium, Präzisionsfräsen"
-        }
+        },
+        "viewer3d": "3D-Teile ansehen"
     },
     "advantages": {
         "title": "Warum Wir",
@@ -201,5 +202,57 @@
         "services": "Leistungen",
         "contactUs": "Kontakt",
         "copyright": "© 2024 Precision Hardware Manufacturing Co. Alle Rechte vorbehalten."
+    },
+    "viewer": {
+        "title": "3D-Teile-Viewer",
+        "pageTitle": "3D-Teile-Viewer | Präzision HW",
+        "backLink": "Zurück zur Website",
+        "panel": {
+            "selectPart": "Teil auswählen",
+            "displayOptions": "Anzeigeoptionen",
+            "autoRotate": "Auto-Rotation",
+            "wireframe": "Drahtgitter",
+            "resetView": "↺ Ansicht zurücksetzen",
+            "partInfo": "Teilinformationen"
+        },
+        "info": {
+            "name": "Name",
+            "material": "Material",
+            "process": "Verfahren",
+            "tolerance": "Toleranz"
+        },
+        "loading": "Modell wird geladen...",
+        "placeholder": "(Platzhaltermodell)",
+        "hint": "Links ziehen zum Drehen · Scrollen zum Zoomen · Rechts ziehen zum Verschieben",
+        "parts": {
+            "cnc-shaft": {
+                "label": "CNC-Präzisionswelle",
+                "name": "CNC-Präzisionswelle",
+                "material": "Aluminium 6061",
+                "process": "CNC-Drehen",
+                "tolerance": "±0.01 mm"
+            },
+            "stamping": {
+                "label": "Stanzteil",
+                "name": "Stanzteil",
+                "material": "SPCC Kaltgewalzter Stahl",
+                "process": "Präzisionsstanzen",
+                "tolerance": "±0.05 mm"
+            },
+            "turning": {
+                "label": "Drehteil",
+                "name": "Drehteil",
+                "material": "Edelstahl 304",
+                "process": "CNC-Drehen",
+                "tolerance": "±0.02 mm"
+            },
+            "bracket": {
+                "label": "Halterung",
+                "name": "Halterung",
+                "material": "Aluminium 7075",
+                "process": "CNC-Fräsen",
+                "tolerance": "±0.03 mm"
+            }
+        }
     }
 }
