@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 零件展示 | 精密五金</title>
+
+    <!-- Fonts (same as landing page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Three.js importmap -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+      }
+    }
+    </script>
+
+    <style>
+        /* ── CSS Variables (mirror landing page) ── */
+        :root {
+            --color-primary: #0C1222;
+            --color-accent: #0891B2;
+            --color-accent-hover: #0E7490;
+            --color-secondary: #64748B;
+            --color-bg: #F8FAFC;
+            --color-surface: #FFFFFF;
+            --color-text: #1E293B;
+            --color-text-muted: #64748B;
+            --color-border: #E2E8F0;
+            --font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            --header-height: 56px;
+            --panel-width: 280px;
+            --transition-base: 300ms ease;
+        }
+        [data-theme="dark"] {
+            --color-primary: #0891B2;
+            --color-accent: #22D3EE;
+            --color-accent-hover: #67E8F9;
+            --color-bg: #030712;
+            --color-surface: #0F172A;
+            --color-text: #F1F5F9;
+            --color-text-muted: #94A3B8;
+            --color-border: #1E293B;
+        }
+
+        /* ── Reset & Base ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; overflow: hidden; }
+        body {
+            font-family: var(--font-family);
+            background: var(--color-bg);
+            color: var(--color-text);
+            transition: background var(--transition-base), color var(--transition-base);
+        }
+
+        /* ── Top Bar ── */
+        .topbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--header-height);
+            background: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+            z-index: 100;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+        }
+        .topbar-left { display: flex; align-items: center; gap: 1rem; }
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color var(--transition-base);
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link svg { width: 16px; height: 16px; }
+        .divider-v {
+            width: 1px; height: 20px;
+            background: #1E293B;
+        }
+        .app-title {
+            color: #F1F5F9;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
+        .theme-btn {
+            background: none;
+            border: 1px solid #1E293B;
+            border-radius: 6px;
+            color: #94A3B8;
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+            display: flex;
+            align-items: center;
+            transition: border-color var(--transition-base), color var(--transition-base);
+        }
+        .theme-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+        .theme-btn svg { width: 16px; height: 16px; }
+
+        /* ── Layout ── */
+        .viewer-layout {
+            position: fixed;
+            top: var(--header-height);
+            left: 0; right: 0; bottom: 0;
+            display: flex;
+        }
+
+        /* ── Canvas Area ── */
+        .canvas-wrap {
+            flex: 1;
+            position: relative;
+            background: var(--color-bg);
+        }
+        #viewer-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ── Loading Overlay ── */
+        .loading-overlay {
+            position: absolute;
+            inset: 0;
+            background: var(--color-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 10;
+            transition: opacity 0.4s ease;
+        }
+        .loading-overlay.hidden { opacity: 0; pointer-events: none; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid var(--color-border);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-text { color: var(--color-text-muted); font-size: 0.875rem; }
+        .progress-bar-wrap {
+            width: 160px; height: 4px;
+            background: var(--color-border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background: var(--color-accent);
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+
+        /* ── Hint Bar ── */
+        .hint-bar {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #94A3B8;
+            font-size: 0.75rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        /* ── Side Panel ── */
+        .side-panel {
+            width: var(--panel-width);
+            background: var(--color-surface);
+            border-left: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            transition: background var(--transition-base), border-color var(--transition-base);
+        }
+        .panel-section {
+            padding: 1rem 1.125rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .panel-label {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-text-muted);
+            margin-bottom: 0.625rem;
+        }
+
+        /* Select */
+        .part-select {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-family);
+            font-size: 0.875rem;
+            cursor: pointer;
+            outline: none;
+            transition: border-color var(--transition-base);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            padding-right: 2rem;
+        }
+        .part-select:focus { border-color: var(--color-accent); }
+
+        /* Toggle row */
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .toggle-row:last-child { margin-bottom: 0; }
+        .toggle-label { font-size: 0.875rem; color: var(--color-text); }
+        .toggle {
+            position: relative;
+            width: 36px; height: 20px;
+        }
+        .toggle input { opacity: 0; width: 0; height: 0; }
+        .toggle-track {
+            position: absolute;
+            inset: 0;
+            background: var(--color-border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background var(--transition-base);
+        }
+        .toggle input:checked + .toggle-track { background: var(--color-accent); }
+        .toggle-track::after {
+            content: '';
+            position: absolute;
+            top: 2px; left: 2px;
+            width: 16px; height: 16px;
+            background: white;
+            border-radius: 50%;
+            transition: transform var(--transition-base);
+        }
+        .toggle input:checked + .toggle-track::after { transform: translateX(16px); }
+
+        /* Reset button */
+        .reset-btn {
+            width: 100%;
+            padding: 0.5rem;
+            background: none;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            color: var(--color-text-muted);
+            font-family: var(--font-family);
+            font-size: 0.8125rem;
+            cursor: pointer;
+            transition: border-color var(--transition-base), color var(--transition-base);
+        }
+        .reset-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+        /* Info panel */
+        .info-grid {
+            display: grid;
+            gap: 0.5rem;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .info-key {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        .info-val {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--color-text);
+            text-align: right;
+        }
+
+        /* ── Language selector ── */
+        .lang-selector { position: relative; }
+        .lang-btn {
+            background: none;
+            border: 1px solid #1E293B;
+            border-radius: 6px;
+            color: #94A3B8;
+            cursor: pointer;
+            padding: 0.3rem 0.625rem;
+            font-family: var(--font-family);
+            font-size: 0.8125rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: border-color var(--transition-base), color var(--transition-base);
+        }
+        .lang-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+        .lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            background: #0F172A;
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 120px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            z-index: 200;
+        }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-option {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0.875rem;
+            background: none;
+            border: none;
+            color: #94A3B8;
+            font-family: var(--font-family);
+            font-size: 0.8125rem;
+            text-align: left;
+            cursor: pointer;
+            transition: background 150ms, color 150ms;
+        }
+        .lang-option:hover { background: #1E293B; color: #F1F5F9; }
+        .lang-option.active { color: var(--color-accent); }
+
+        /* ── Mobile: panel slides up from bottom ── */
+        @media (max-width: 640px) {
+            :root { --panel-width: 100%; }
+            .viewer-layout { flex-direction: column; }
+            .canvas-wrap { flex: 1; min-height: 0; }
+            .side-panel {
+                width: 100%;
+                height: auto;
+                max-height: 220px;
+                border-left: none;
+                border-top: 1px solid var(--color-border);
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+            .panel-section {
+                min-width: 200px;
+                border-bottom: none;
+                border-right: 1px solid var(--color-border);
+            }
+            .hint-bar { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="../" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 5l-7 7 7 7"/>
+                </svg>
+                <span data-i18n="viewer.backLink">返回官网</span>
+            </a>
+            <div class="divider-v"></div>
+            <span class="app-title" data-i18n="viewer.title">3D 零件展示</span>
+        </div>
+        <div class="topbar-right">
+            <!-- Language selector -->
+            <div class="lang-selector" id="lang-selector">
+                <button class="lang-btn" id="lang-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span id="current-lang-label">中文</span>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option active" data-lang="zh-CN">中文</button>
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="ja">日本語</button>
+                    <button class="lang-option" data-lang="fr">Français</button>
+                    <button class="lang-option" data-lang="de">Deutsch</button>
+                </div>
+            </div>
+            <!-- Theme toggle -->
+            <button class="theme-btn" id="theme-toggle" title="切换主题">
+                <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="viewer-layout">
+        <!-- Canvas -->
+        <div class="canvas-wrap">
+            <canvas id="viewer-canvas"></canvas>
+
+            <!-- Loading -->
+            <div class="loading-overlay" id="loading-overlay">
+                <div class="spinner"></div>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="loading-text" id="loading-text" data-i18n="viewer.loading">加载模型中...</div>
+            </div>
+
+            <!-- Hint -->
+            <div class="hint-bar" data-i18n="viewer.hint">左键旋转 &nbsp;·&nbsp; 滚轮缩放 &nbsp;·&nbsp; 右键平移</div>
+        </div>
+
+        <!-- Side Panel -->
+        <aside class="side-panel">
+            <!-- Part selector -->
+            <div class="panel-section">
+                <div class="panel-label" data-i18n="viewer.panel.selectPart">选择零件</div>
+                <select class="part-select" id="part-select"></select>
+            </div>
+
+            <!-- Display options -->
+            <div class="panel-section">
+                <div class="panel-label" data-i18n="viewer.panel.displayOptions">显示选项</div>
+                <div class="toggle-row">
+                    <span class="toggle-label" data-i18n="viewer.panel.autoRotate">自动旋转</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="toggle-autorotate">
+                        <span class="toggle-track"></span>
+                    </label>
+                </div>
+                <div class="toggle-row">
+                    <span class="toggle-label" data-i18n="viewer.panel.wireframe">线框模式</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="toggle-wireframe">
+                        <span class="toggle-track"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Reset -->
+            <div class="panel-section">
+                <button class="reset-btn" id="reset-btn" data-i18n="viewer.panel.resetView">↺ 重置视角</button>
+            </div>
+
+            <!-- Part info -->
+            <div class="panel-section">
+                <div class="panel-label" data-i18n="viewer.panel.partInfo">零件信息</div>
+                <div class="info-grid" id="info-grid">
+                    <div class="info-row">
+                        <span class="info-key" data-i18n="viewer.info.name">名称</span>
+                        <span class="info-val" id="info-name">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key" data-i18n="viewer.info.material">材质</span>
+                        <span class="info-val" id="info-material">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key" data-i18n="viewer.info.process">工艺</span>
+                        <span class="info-val" id="info-process">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key" data-i18n="viewer.info.tolerance">公差</span>
+                        <span class="info-val" id="info-tolerance">—</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script type="module" src="viewer.js"></script>
+</body>
+</html>
